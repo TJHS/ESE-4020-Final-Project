@@ -1,0 +1,17 @@
+{
+ "written_utc": "2026-11-24T02:44:14.151486+00:00",
+ "sample": "targets 1931-01 to 1949-12 (228 months); never used for tuning or placebo fitting",
+ "primary": "real-minus-placebo Sharpe gap, E1 (mean over placebo histories) and E2 (average position), wild-bootstrap placebo W, exact Gaussian kernel, T = 12",
+ "bandwidths": [
+  0.5,
+  2.0
+ ],
+ "penalty": "chosen on validation targets 1950-1979, as in the main analysis",
+ "placebo_fit": "AR(1) fitted on predictor months 1950-01 to 2025-11 (outside the fresh window)",
+ "histories": 200,
+ "bootstrap": "5,000 circular 12-month blocks, seed 412019",
+ "secondary": "Gaussian placebo G; buy-and-hold and historical-mean Sharpe",
+ "decision_rule": "real inputs show incremental information if the 95% paired interval for the E1 gap excludes zero at a bandwidth; report both bandwidths and a joint max-t band",
+ "caveat": "an earlier aggregate check (1930-2020, no placebo) overlapped this window",
+ "sha256": "66702b7702cb19d9d61db4307c91f0b651860c579041f086c7b47f25d71c1450"
+}

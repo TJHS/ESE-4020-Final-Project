@@ -1,0 +1,23 @@
+\multicolumn{6}{l}{\emph{Published and exact replication (KMZ code logic and data, 300 seeds)}} \\
+KMZ Table~I, $P=12{,}000$, $z=10^3$ & 1931--2020 & -- & 0.47 & 0.31 & 0.6 \\
+Exact replication & 1931--2020 & 0.47 & 0.47 & 0.31 & 0.6 \\
+KMZ Table~I, linear, $z=10^3$ & 1931--2020 & -- & 0.46 & 0.33 & $-$3.8 \\
+Exact replication, linear & 1931--2020 & 0.46 & 0.46 & 0.33 & $-$3.8 \\
+\midrule \multicolumn{6}{l}{\emph{One change at a time, Goyal--Welch 2025 file, 100 seeds}} \\
+(1) Our data, KMZ conventions & 1931--2020 & 0.46 & 0.47 & 0.31 & 0.6 \\
+(2) + CPI lagged one more month & 1931--2020 & 0.38 & 0.39 & 0.23 & $-$0.1 \\
+(3) + fixed feature scaling & 1931--2020 & 0.34 & 0.34 & 0.22 & 0.3 \\
+(4) + raw (unscaled) returns & 1931--2020 & 0.31 & 0.35 & 0.28 & $-$0.5$^\dagger$ \\
+(5) + expanding z-scores & 1931--2020 & 0.34 & 0.38 & 0.30 & $-$0.4$^\dagger$ \\
+(6) + penalty tuned on 1950--79 & 1931--2020 & 0.34 & 0.38 & 0.30 & $-$0.4$^\dagger$ \\
+(7) + test dates (main spec.) & 1980--2025 & 0.23 & 0.24 & 0.16 & $-$2.4$^\dagger$ \\
+(8) + rolling intercept & 1980--2025 & 0.29 & 0.29 & 0.17 & $-$7.7$^\dagger$ \\
+\midrule \multicolumn{6}{l}{\emph{Nagel's ridgeless raw-return case and benchmarks}} \\
+Ridgeless, raw returns (KMZ data) & 1931--2020 & 0.32 & 0.36 & 0.27 & $-$0.6 \\
+Ridgeless, raw returns (our data) & 1980--2025 & 0.21 & 0.22 & 0.11 & $-$3.1$^\dagger$ \\
+Vol.-timed momentum, Nagel eq.~(14) & 1931--2020 & 0.42 & -- & 0.39 & -- \\
+Vol.-timed momentum, Nagel eq.~(14) & 1980--2025 & 0.25 & -- & 0.11 & -- \\
+Buy and hold (raw / vol.-scaled) & 1931--2020 & \multicolumn{2}{c}{0.45 / 0.51} & 0 & -- \\
+Buy and hold (raw / vol.-scaled) & 1980--2025 & \multicolumn{2}{c}{0.59 / 0.60} & 0 & -- \\
+Historical mean & 1980--2025 & \multicolumn{2}{c}{0.58} & -- & 0$^\dagger$ \\
+Ridge, 15 predictors (course baseline) & 1980--2025 & \multicolumn{2}{c}{0.13} & -- & $-$2.5$^\dagger$ \\
