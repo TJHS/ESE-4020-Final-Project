@@ -1,4 +1,5 @@
 {
+ "signal_predictor": "dp",
  "a": 0.11,
  "vtm_sharpe": 0.3567957817716498,
  "lambda": {
