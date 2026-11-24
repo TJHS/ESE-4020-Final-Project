@@ -20,17 +20,22 @@ ESE 4020 final project (Teddy). Random-feature ridge trained on 12 months appear
 ## How to run
 Requires Python 3.13.
 
-1. Get the repository and install the pinned packages:
+**Step 1.** Get the repository and install the pinned packages:
+
 ```
 git clone https://github.com/TJHS/ESE-4020-Final-Project.git
 cd ESE-4020-Final-Project
 pip install -r requirements.txt
 ```
-2. Run the notebook (about one minute; it reads the saved results and rebuilds every table and figure):
+
+**Step 2.** Run the notebook (about one minute; it reads the saved results and rebuilds every table and figure):
+
 ```
 jupyter nbconvert --to notebook --execute project.ipynb --output project_run.ipynb
 ```
-   To open it interactively instead: `pip install notebook`, then `jupyter notebook project.ipynb` and run all cells.
-3. To recompute everything from scratch, set the flags in `RUN` (first code cell) to `True` and run all cells again (about 2.5 hours on two cores; section 2 needs the KMZ files described above in `kmz_replication/`, and skips with a message if they are missing). Every experiment fixes its random seeds, so a rerun reproduces the saved numbers exactly.
+
+To open it interactively instead, run `pip install notebook`, then `jupyter notebook project.ipynb`, and run all cells.
+
+**Step 3 (optional).** To recompute everything from scratch, set the flags in `RUN` (first code cell) to `True` and run all cells again (about 2.5 hours on two cores). Section 2 needs the KMZ files described above in `kmz_replication/` and skips with a message if they are missing. Every experiment fixes its random seeds, so a rerun reproduces the saved numbers exactly.
 
 Penalties are chosen on validation targets 1950-1979; the test period (targets 1980-2025) is scored once; placebo AR(1) models are fitted on data through 1979. `MANIFEST.md` lists which notebook section produces each table and figure.
