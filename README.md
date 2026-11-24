@@ -17,8 +17,9 @@ ESE 4020 final project (Teddy). Random-feature ridge trained on 12 months appear
 **KMZ replication code and data** (needed only for the exact replication in Table 1; not redistributed here). Download "Replication Code" from the supporting information of Kelly, Malamud and Zhou (2024), *Journal of Finance* 79(1), doi:10.1111/jofi.13298, and unzip it into `kmz_replication/`.
 
 ## How to run
+Requires Python 3.13.
 ```
 pip install -r requirements.txt
 jupyter nbconvert --to notebook --execute project.ipynb     # or open it and run all cells
 ```
-Every script fixes its random seeds. Penalties are chosen on validation targets 1950-1979; the test period (targets 1980-2025) is scored once; placebo AR(1) models are fitted on data through 1979.
+Every experiment fixes its random seeds. Penalties are chosen on validation targets 1950-1979; the test period (targets 1980-2025) is scored once; placebo AR(1) models are fitted on data through 1979.
